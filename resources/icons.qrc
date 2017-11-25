@@ -1,0 +1,39 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/connect.png</file>
+    <file>icons/disconnect.png</file>
+    <file>icons/user_add.png</file>
+    <file>icons/group_gear.png</file>
+    <file>icons/console.png</file>
+    <file>icons/dofus.png</file>
+    <file>icons/gear_in.png</file>
+    <file>icons/stop.png</file>
+    <file>icons/play.png</file>
+    <file>icons/script.png</file>
+    <file>icons/smile.png</file>
+    <file>icons/lightning.png</file>
+    <file>icons/kama.png</file>
+    <file>icons/pods.png</file>
+	<file>icons/heart.png</file>
+	<file>icons/spells.png</file>
+	<file>icons/user.png</file>
+	<file>icons/stats.png</file>
+	<file>icons/inventory.png</file>
+	<file>icons/jobs.png</file>
+	<file>icons/inventory.png</file>
+	<file>icons/inventory_all.png</file>
+	<file>icons/inventory_consumable.png</file>
+	<file>icons/inventory_equipment.png</file>
+	<file>icons/inventory_quest.png</file>
+	<file>icons/inventory_resources.png</file>
+	<file>icons/flood.png</file>
+	<file>icons/map.png</file>
+	<file>icons/exit.png</file>
+	<file>icons/time.png</file>
+	<file>icons/options.png</file>
+	<file>icons/fight.png</file>
+	<file>icons/swiftbot.png</file>
+	<file>icons/statistics.png</file>
+	<file>icons/folder-search.png</file>
+  </qresource>
+</RCC>

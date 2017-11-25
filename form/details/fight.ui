@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DetailsFight</class>
+ <widget class="QWidget" name="DetailsFight">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>574</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Combat</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tabSpells">
+      <attribute name="icon">
+       <iconset resource="../../resources/icons.qrc">
+        <normaloff>:/icons/icons/spells.png</normaloff>:/icons/icons/spells.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Sorts</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tabBehavior">
+      <attribute name="icon">
+       <iconset resource="../../resources/icons.qrc">
+        <normaloff>:/icons/icons/options.png</normaloff>:/icons/icons/options.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Configuration</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBoxPreparePhase">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Phase de préparation</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="1" column="0">
+           <widget class="QLabel" name="label">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Détermine la façon dont le personnage se place au début du combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aucun placement : &lt;/span&gt;Le personnage restera à l'emplacement où il était en entrant dans le combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Proche des ennemis :&lt;/span&gt; Le personnage se placera le plus proche possible de l'ennemi le plus proche.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Loin des ennemis :&lt;/span&gt; Le personnage se placera le plus loin possible des ennemis.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Placement au début du combat :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBoxPlacement">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Détermine la façon dont le personnage se place au début du combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aucun placement : &lt;/span&gt;Le personnage restera à l'emplacement où il était en entrant dans le combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Proche des ennemis :&lt;/span&gt; Le personnage se placera le plus proche possible de l'ennemi le plus proche.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Loin des ennemis :&lt;/span&gt; Le personnage se placera le plus loin possible des ennemis.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Aucun placement</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Proche des ennemis</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Loin des ennemis</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Permet de contrôler la manière dont le personnage bloque l'entrée dans le combat par les joueurs extérieurs à son groupe.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bloquer si quelqu'un rejoint :&lt;/span&gt; Le personnage laissera le combat ouvert. Si quelqu'un d'extérieur rejoint le combat, il sera exclu et le combat sera bloqué. Le même comportement se produira lors du prochain combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toujours bloquer :&lt;/span&gt; Le personnage bloquera systématiquement le combat aux personnages étrangers à son groupe.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ne pas bloquer :&lt;/span&gt; Le personnage ne bloquera jamais les combats et des joueurs externes peuvent rejoindre et participer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Bloquer les combats :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="comboBoxFightLock">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Permet de contrôler la manière dont le personnage bloque l'entrée dans le combat par les joueurs extérieurs à son groupe.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bloquer si quelqu'un rejoint :&lt;/span&gt; Le personnage laissera le combat ouvert. Si quelqu'un d'extérieur rejoint le combat, il sera exclu et le combat sera bloqué. Le même comportement se produira lors du prochain combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toujours bloquer :&lt;/span&gt; Le personnage bloquera systématiquement le combat aux personnages étrangers à son groupe.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ne pas bloquer :&lt;/span&gt; Le personnage ne bloquera jamais les combats et des joueurs externes peuvent rejoindre et participer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Bloquer si quelqu'un rejoint</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Toujours bloquer</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ne pas bloquer</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Permet de contrôler la manière dont le personnage bloque le mode spectateur du combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bloquer si quelqu'un rejoint :&lt;/span&gt; Le personnage laissera le mode spectateur ouvert. Si quelqu'un commence à regarder le combat, le mode spectateur sera bloqué. Le mode spectateur ne sera rouvert que pour le combat suivant.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toujours bloquer :&lt;/span&gt; Le personnage bloquera systématiquement le mode spectateur.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ne pas bloquer :&lt;/span&gt; Le personnage ne bloquera jamais le mode spectateur et tout le monde peut regarder librement.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Mode spectateur :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="comboBoxSpectateLock">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Permet de contrôler la manière dont le personnage bloque le mode spectateur du combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bloquer si quelqu'un rejoint :&lt;/span&gt; Le personnage laissera le mode spectateur ouvert. Si quelqu'un commence à regarder le combat, le mode spectateur sera bloqué. Le mode spectateur ne sera rouvert que pour le combat suivant.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toujours bloquer :&lt;/span&gt; Le personnage bloquera systématiquement le mode spectateur.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ne pas bloquer :&lt;/span&gt; Le personnage ne bloquera jamais le mode spectateur et tout le monde peut regarder librement.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Bloquer si quelqu'un rejoint</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Toujours bloquer</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ne pas bloquer</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1">
+           <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBoxOutOfFight">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Hors combat</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <spacer name="verticalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lorsque le personnage est en dessous de ce pourcentage de vie, il arrêtera ses activités afin de se régénérer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Le bot se régénère en dessous de</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxRegenTreshold">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lorsque le personnage est en dessous de ce pourcentage de vie, il arrêtera ses activités afin de se régénérer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>80</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lorsque le personnage se régénère, il attend d'atteindre ce pourcentage de vie avant de reprendre ses activités.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>et se régénère jusqu'à</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxRegenUntil">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lorsque le personnage se régénère, il attend d'atteindre ce pourcentage de vie avant de reprendre ses activités.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>100</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QCheckBox" name="checkBoxRegenWithItem">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Le personnage peut utiliser un consommable pour se régénérer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Utiliser un objet pour se régénérer. Id :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxRegenItemId">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Le personnage peut utiliser un consommable pour se régénérer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="maximum">
+               <number>999999999</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <widget class="QCheckBox" name="checkBoxShowFightDetails">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Afficher les détails du combat permet d'avoir un compte rendu précis des actions effectuées par le personnage au cours du combat.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Afficher les détails du combat</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBoxFightBehavior">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Comportement en combat</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Détermine la façon dont le personnage se déplace en combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Immobile :&lt;/span&gt; Le personnage ne bouge jamais et termine son tour là où il l'a commencé.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fuyard : &lt;/span&gt;Le personnage tente systématiquement de s'éloigner des ennemis.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aggressif :&lt;/span&gt; Le personnage tente systématiquement de se rapprocher des ennemis.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Stratégie de déplacement :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="comboBoxFightBehavior">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Détermine la façon dont le personnage se déplace en combat.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Immobile :&lt;/span&gt; Le personnage ne bouge jamais et termine son tour là où il l'a commencé.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fuyard : &lt;/span&gt;Le personnage tente systématiquement de s'éloigner des ennemis.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aggressif :&lt;/span&gt; Le personnage tente systématiquement de se rapprocher des ennemis.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Immobile</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Fuyard</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Aggressif</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Détermine la vitesse à laquelle le personnage joue lors des combats.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Normale :&lt;/span&gt; Le personnage joue à la vitesse d'un joueur lambda.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rapide :&lt;/span&gt; Le personnage joue comme un joueur habitué et utilisant les raccourcis.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ultra rapide :&lt;/span&gt; Le personnage joue à une vitesse surhumaine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Vitesse de combat :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="comboBoxFightSpeed">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Détermine la vitesse à laquelle le personnage joue lors des combats.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Normale :&lt;/span&gt; Le personnage joue à la vitesse d'un joueur lambda.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rapide :&lt;/span&gt; Le personnage joue comme un joueur habitué et utilisant les raccourcis.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ultra rapide :&lt;/span&gt; Le personnage joue à une vitesse surhumaine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Normale</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Rapide</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ultra rapide</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Permet au personnage de se rapprocher afin de lancer ses sorts. Si le personnage a une stratégie de déplacement &lt;span style=&quot; font-weight:600;&quot;&gt;Immobile&lt;/span&gt; cela n'aura aucun effet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>S'approcher si la distance est supérieure à :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QSpinBox" name="spinBoxFightDistance">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Permet au personnage de se rapprocher afin de lancer ses sorts. Si le personnage a une stratégie de déplacement &lt;span style=&quot; font-weight:600;&quot;&gt;Immobile&lt;/span&gt; cela n'aura aucun effet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="suffix">
+             <string> Cases</string>
+            </property>
+            <property name="maximum">
+             <number>63</number>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1">
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../resources/icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>checkBoxRegenWithItem</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>spinBoxRegenItemId</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>473</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>278</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

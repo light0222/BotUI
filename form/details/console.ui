@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DetailsConsole</class>
+ <widget class="QWidget" name="DetailsConsole">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>866</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Console</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="2">
+    <widget class="QComboBox" name="comboBoxChannel">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>0</height>
+      </size>
+     </property>
+     <item>
+      <property name="text">
+       <string>Général</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Guilde</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Groupe</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Alliance</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Équipe</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="6">
+    <widget class="QTextEdit" name="textEdit">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="5">
+    <widget class="QPushButton" name="pushButtonEmote">
+     <property name="maximumSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Smileys</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../../resources/icons.qrc">
+       <normaloff>:/icons/icons/smile.png</normaloff>:/icons/icons/smile.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QLineEdit" name="lineEditChatMessage">
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Entrez votre message ici</string>
+     </property>
+     <property name="placeholderText">
+      <string>Entrez votre message ici</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="comboBoxStatus">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Statut du personnage</string>
+     </property>
+     <property name="currentText">
+      <string>Disponible</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Disponible</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Absent</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Privé</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Solo</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <widget class="QPushButton" name="pushButtonSendMessage">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Envoyer le message dans le chat du jeu</string>
+     </property>
+     <property name="text">
+      <string>Envoyer</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../resources/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

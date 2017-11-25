@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CharacterView</class>
+ <widget class="QMainWindow" name="CharacterView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>703</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>200</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QWidget" name="topInfoContainer" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="labelConnectionStatus">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Statut de connexion du personnage</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font-weight:bold;
+color: rgb(0, 255, 0);</string>
+           </property>
+           <property name="text">
+            <string>Connecté</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSeparator">
+           <property name="text">
+            <string notr="true">-</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelScriptName">
+           <property name="toolTip">
+            <string>Script actuellement chargé</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font-weight:bold;
+color: rgb(255, 170, 0);</string>
+           </property>
+           <property name="text">
+            <string>Recolte [Multi-métier] Incarnam</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonLoadScript">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Charger un script sur ce personnage</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/icons.qrc">
+             <normaloff>:/icons/icons/script.png</normaloff>:/icons/icons/script.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonStartScript">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Lancer le script de ce personnage</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/icons.qrc">
+             <normaloff>:/icons/icons/play.png</normaloff>:/icons/icons/play.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonStopScript">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Arrêter le script de ce personnage</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/icons.qrc">
+             <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonDisconnect">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Déconnecter le personnage</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/icons.qrc">
+             <normaloff>:/icons/icons/disconnect.png</normaloff>:/icons/icons/disconnect.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonUnload">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>Décharger le personnage de Swiftbot</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/icons.qrc">
+             <normaloff>:/icons/icons/exit.png</normaloff>:/icons/icons/exit.png</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="labelLevel">
+           <property name="toolTip">
+            <string>Niveau du personnage</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight:bold;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <property name="text">
+            <string notr="true">Niveau 3</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="progressBar">
+           <property name="toolTip">
+            <string>Progression du niveau suivant</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QProgressBar {
+     border: 1px solid  rgb(35, 35, 35);
+     border-radius: 5px;
+     background-color: rgb(45, 45, 45);
+     text-align: center;
+     font-weight: bold;
+ }
+
+QProgressBar::chunk {
+    background-color:qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0.5, stop:0 rgba(115, 37, 149, 255), stop:1 rgba(165, 54, 213, 255));
+}</string>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>124000</number>
+           </property>
+           <property name="value">
+            <number>12045</number>
+           </property>
+           <property name="format">
+            <string>%v/%m (%p%)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelPosition">
+           <property name="styleSheet">
+            <string notr="true">font-weight:bold;
+color: rgb(255, 170, 0);</string>
+           </property>
+           <property name="text">
+            <string notr="true">[-1,-14] - Astrub (Cité d'Astrub)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelSubscribeStatus">
+           <property name="toolTip">
+            <string>Abonnement du personnage</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font-weight:bold;
+color: rgb(255, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Compte non abonné</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="tabWidgetDetails">
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QWidget" name="bottomInfoContainer" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="2">
+        <layout class="QHBoxLayout" name="energyLayout">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="labelEnergyLogo">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../resources/stats.qrc">:/stat/stats/stamina.png</pixmap>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelEnergy">
+           <property name="styleSheet">
+            <string notr="true">font-weight:bold;</string>
+           </property>
+           <property name="text">
+            <string>Energie:</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="energyBar">
+           <property name="styleSheet">
+            <string notr="true">QProgressBar {
+     border: 1px solid  rgb(35, 35, 35);
+     border-radius: 5px;
+     background-color: rgb(45, 45, 45);
+     text-align: center;
+     font-weight: bold;
+ }
+
+QProgressBar::chunk {
+    background-color:qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0.5, stop:0 rgba(115, 37, 149, 255), stop:1 rgba(165, 54, 213, 255));
+}</string>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+           <property name="value">
+            <number>9950</number>
+           </property>
+           <property name="format">
+            <string>%v/%m (%p%)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="lifeLayout">
+         <item>
+          <widget class="QLabel" name="labelLifeLogo">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../resources/icons.qrc">:/icons/icons/heart.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelLife">
+           <property name="styleSheet">
+            <string notr="true">font-weight:bold;</string>
+           </property>
+           <property name="text">
+            <string>Vie:</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="lifeBar">
+           <property name="styleSheet">
+            <string notr="true">QProgressBar {
+     border: 1px solid  rgb(35, 35, 35);
+     border-radius: 5px;
+     background-color: rgb(45, 45, 45);
+     text-align: center;
+     font-weight: bold;
+ }
+
+QProgressBar::chunk {
+    background-color:qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0.5, stop:0 rgba(115, 37, 149, 255), stop:1 rgba(165, 54, 213, 255));
+}</string>
+           </property>
+           <property name="maximum">
+            <number>150</number>
+           </property>
+           <property name="value">
+            <number>99</number>
+           </property>
+           <property name="format">
+            <string>%v/%m (%p%)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="3">
+        <layout class="QHBoxLayout" name="podsLayout">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="labelPodsLogo">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../resources/icons.qrc">:/icons/icons/pods.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelPods">
+           <property name="styleSheet">
+            <string notr="true">font-weight:bold;</string>
+           </property>
+           <property name="text">
+            <string>Pods:</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="podsBar">
+           <property name="styleSheet">
+            <string notr="true">QProgressBar {
+     border: 1px solid  rgb(35, 35, 35);
+     border-radius: 5px;
+     background-color: rgb(45, 45, 45);
+     text-align: center;
+     font-weight: bold;
+ }
+
+QProgressBar::chunk {
+    background-color:qlineargradient(spread:reflect, x1:0, y1:1, x2:0, y2:0.5, stop:0 rgba(115, 37, 149, 255), stop:1 rgba(165, 54, 213, 255));
+}</string>
+           </property>
+           <property name="maximum">
+            <number>1880</number>
+           </property>
+           <property name="value">
+            <number>99</number>
+           </property>
+           <property name="format">
+            <string>%v/%m (%p%)</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="4">
+        <layout class="QHBoxLayout" name="kamasLayout">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="labelKamasLogo">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../resources/icons.qrc">:/icons/icons/kama.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelKamas">
+           <property name="styleSheet">
+            <string notr="true">font-weight:bold;</string>
+           </property>
+           <property name="text">
+            <string>Kamas:</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="kamasLabel">
+           <property name="minimumSize">
+            <size>
+             <width>90</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 10pt &quot;Calibri&quot;;
+font-weight:bold;
+color: rgb(250, 255, 188);</string>
+           </property>
+           <property name="text">
+            <string notr="true">18754941548</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources/stats.qrc"/>
+  <include location="../resources/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

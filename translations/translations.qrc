@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="tr">
+    <file alias="swiftbot_en.qm">swiftbot_en.qm</file>
+    <file alias="swiftbot_fr.qm">swiftbot_fr.qm</file>
+  </qresource>
+</RCC>

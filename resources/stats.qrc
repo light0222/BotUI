@@ -1,0 +1,42 @@
+<RCC>
+  <qresource prefix="stat">
+  	<file>stats/actionPoints.png</file>
+	<file>stats/agility.png</file>
+	<file>stats/attackAP.png</file>
+	<file>stats/attackMP.png</file>
+	<file>stats/carac_wisdom.png</file>
+	<file>stats/chance.png</file>
+	<file>stats/crit.png</file>
+	<file>stats/criticalDamage.png</file>
+	<file>stats/criticalReduction.png</file>
+	<file>stats/damage.png</file>
+	<file>stats/damagesPercent.png</file>
+	<file>stats/dodgeAP.png</file>
+	<file>stats/dodgeMP.png</file>
+	<file>stats/energy.png</file>
+	<file>stats/escape.png</file>
+	<file>stats/heal.png</file>
+	<file>stats/health.png</file>
+	<file>stats/initiative.png</file>
+	<file>stats/intelligence.png</file>
+	<file>stats/movementPoints.png</file>
+	<file>stats/prospecting.png</file>
+	<file>stats/push.png</file>
+	<file>stats/pushReduction.png</file>
+	<file>stats/range.png</file>
+	<file>stats/res_air.png</file>
+	<file>stats/res_earth.png</file>
+	<file>stats/res_fire.png</file>
+	<file>stats/res_neutral.png</file>
+	<file>stats/res_water.png</file>
+	<file>stats/return.png</file>
+	<file>stats/stamina.png</file>
+	<file>stats/strength.png</file>
+	<file>stats/summonableCreaturesBoost.png</file>
+	<file>stats/trap.png</file>
+	<file>stats/trapPercent.png</file>
+	<file>stats/vitality.png</file>
+	<file>stats/weaponDamage.png</file>
+	<file>stats/wisdom.png</file>
+  </qresource>
+</RCC>

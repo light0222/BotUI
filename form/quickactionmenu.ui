@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QuickActionMenu</class>
+ <widget class="QMenu" name="QuickActionMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>230</width>
+    <height>165</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true"/>
+  </property>
+  <property name="title">
+   <string/>
+  </property>
+  <action name="actionConnecter_les_comptes">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/icons/connect.png</normaloff>:/icons/icons/connect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connecter les comptes</string>
+   </property>
+   <property name="toolTip">
+    <string>Connecte tous les comptes actuellement chargés</string>
+   </property>
+  </action>
+  <action name="actionD_connecter_les_comptes">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/icons/disconnect.png</normaloff>:/icons/icons/disconnect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Déconnecter les comptes</string>
+   </property>
+   <property name="toolTip">
+    <string>Déconnecte tous les comptes actuellement chargés</string>
+   </property>
+  </action>
+  <action name="actionD_marrer_tous_les_trajets">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/icons/play.png</normaloff>:/icons/icons/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Démarrer tous les trajets</string>
+   </property>
+  </action>
+  <action name="actionStopper_tous_les_trajets">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stopper tous les trajets</string>
+   </property>
+  </action>
+  <action name="actionCharger_un_trajet">
+   <property name="icon">
+    <iconset resource="../resources/icons.qrc">
+     <normaloff>:/icons/icons/script.png</normaloff>:/icons/icons/script.png</iconset>
+   </property>
+   <property name="text">
+    <string>Charger un trajet</string>
+   </property>
+  </action>
+  <addaction name="actionConnecter_les_comptes"/>
+  <addaction name="actionD_connecter_les_comptes"/>
+  <addaction name="separator"/>
+  <addaction name="actionD_marrer_tous_les_trajets"/>
+  <addaction name="actionStopper_tous_les_trajets"/>
+  <addaction name="actionCharger_un_trajet"/>
+  <addaction name="separator"/>
+ </widget>
+ <resources>
+  <include location="../resources/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
